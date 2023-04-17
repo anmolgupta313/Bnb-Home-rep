@@ -1,0 +1,102 @@
+import filter1 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10283.jpg"
+import filter2 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10282.jpg"
+import filter3 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10281.jpg"
+import { homeData } from "./homeData"
+
+const houses= homeData
+export const filterHome= [{
+    "id":1,
+    "img":filter1,
+    "title":"Mansion",
+    "homes": houses
+},
+{
+    "id":2,
+    "img":filter2,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":3,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":4,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":5,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":6,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":7,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":8,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":9,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":10,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":11,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":12,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":13,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":14,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+{
+    "id":15,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},  {
+    "id":16,
+    "img":filter3,
+    "title":"Mansion",
+    "homes":[{}]
+},
+]

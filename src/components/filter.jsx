@@ -1,114 +1,17 @@
 import React, { useState, useRef } from "react"
-import { homeData } from "./homeData"
-import filter1 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10283.jpg"
-import filter2 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10282.jpg"
-import filter3 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10281.jpg"
-
+import {CCarousel, CCarouselItem, CImage} from '@coreui/react';
+import '@coreui/coreui/dist/css/coreui.min.css'
+import { filterHome } from "./filterhome";
 
 
 export default function Filters(){
     const[filterTab, setFilterTab]= useState(1);
-    
-    const[houses, setHouses]= useState(homeData)
+    const[heartTab, setheartTab]= useState(1);
+    const [favOn, setFavOn]= useState(false)
 
     const elementRef = useRef();
 
-    const filterHome= [{
-        "id":1,
-        "img":filter1,
-        "title":"Mansion",
-        "homes": houses
-    },
-    {
-        "id":2,
-        "img":filter2,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":3,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":4,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":5,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":6,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":7,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":8,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":9,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":10,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":11,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":12,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":13,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":14,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-    {
-        "id":15,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },  {
-        "id":16,
-        "img":filter3,
-        "title":"Mansion",
-        "homes":[{}]
-    },
-   ]
+
 const handleClick= (e)=>{
     console.log(e.target.id)
 return setFilterTab(e.target.id)
@@ -129,12 +32,22 @@ return setFilterTab(e.target.id)
     })
 
     const homesTab= filterHome.map((tab,i)=>{
+
+        function toggle(e){
+            setheartTab(e.target.id)
+            setFavOn((prev)=>{
+              return !prev
+            })
+            // console.log(favOn)
+          }
+
         const houseMap= tab.homes.map((homes)=>{
+            console.log(homes.id,"id")
             return(
                 <div className="homes-main-div">
             <div className="home-imgg-div" >
                 <img src={homes.img} alt="home" className="home-imgg" />
-                <img className="heart-black" src={homes.heartBlack}></img>
+                <img className="heart-black" onClick={toggle} id= {homes.id} src={heartTab=== `${homes.id}` && favOn? homes.heartRed : homes.heartBlack}></img>
             </div>
             <div className="star-name-rating-div-main">
                 <div>
@@ -180,6 +93,17 @@ return setFilterTab(e.target.id)
             <div>
                 {homesTab}
             </div>
+            {/* <div><CCarousel controls indicators>
+  <CCarouselItem>
+    <CImage className="d-flex w-100" src={filter1} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-flex w-100" src={filter2} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-flex w-100" src={filter3} alt="slide 3" />
+  </CCarouselItem>
+</CCarousel></div> */}
         </div>
     )
 } 
