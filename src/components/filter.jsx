@@ -46,7 +46,21 @@ return setFilterTab(e.target.id)
             return(
                 <div className="homes-main-div">
             <div className="home-imgg-div" >
-                <img src={homes.img} alt="home" className="home-imgg" />
+                {/* <img src={homes.img} alt="home" className="home-imgg" /> */}
+                <CCarousel controls indicators>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={homes.img} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={homes.img} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={homes.img} alt="slide 3" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block w-100" src={homes.img} alt="slide 3" />
+  </CCarouselItem>
+</CCarousel>
                 <img className="heart-black" onClick={toggle} id= {homes.id} src={heartTab=== `${homes.id}` && favOn? homes.heartRed : homes.heartBlack}></img>
             </div>
             <div className="star-name-rating-div-main">
