@@ -1,6 +1,7 @@
 import './App.css';
 import Nav from './components/nav';
 import Home from './components/home';
+import Footer from './components/footer';
 import { useState } from 'react';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Nav drop={drop} toggle={toggle} />
       <Home />
+      <Footer />
     </div>
   );
 }

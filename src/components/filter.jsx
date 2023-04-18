@@ -37,7 +37,6 @@ export default function Filters() {
   });
 
   const homesTab = filterHome.map((tab, i) => {
-
     function onHover(e) {
       console.log("Yes working hover");
       setHoverIndicator(e.target.id);
@@ -52,10 +51,8 @@ export default function Filters() {
       // console.log(favOn)
     }
 
-  
-
-    function offHover(){
-console.log("Off")
+    function offHover() {
+      console.log("Off");
     }
 
     const houseMap = tab.homes.map((homes) => {
@@ -65,13 +62,17 @@ console.log("Off")
             {/* <img src={homes.img} alt="home" className="home-imgg" /> */}
             <CCarousel
               interval="false"
-              controls={hoverIndicator === `${homes.id}`&& indicators === true ? true : false}
+              controls={
+                hoverIndicator === `${homes.id}` && indicators === true
+                  ? true
+                  : false
+              }
               indicators
             >
               <CCarouselItem>
                 <CImage
-                id={homes.id}
-                  onMouseOver={ onHover}
+                  id={homes.id}
+                  onMouseOver={onHover}
                   className="d-block w-100"
                   src={homes.img}
                   alt="slide 1"
@@ -171,17 +172,6 @@ console.log("Off")
       </div>
 
       <div>{homesTab}</div>
-      {/* <div><CCarousel controls indicators>
-  <CCarouselItem>
-    <CImage className="d-flex w-100" src={filter1} alt="slide 1" />
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="d-flex w-100" src={filter2} alt="slide 2" />
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="d-flex w-100" src={filter3} alt="slide 3" />
-  </CCarouselItem>
-</CCarousel></div> */}
     </div>
   );
 }

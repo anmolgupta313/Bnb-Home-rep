@@ -13,7 +13,7 @@ export default function Nav(props) {
             </section>
             <section className="rest-section">
                 <div className="airbnb-your-home">
-                    <p>Airbnb your home</p>
+                    <p className="airbnb-your-home">Airbnb your home</p>
                 </div>
                 <div className="globe-div">
                     <img src={globe} className="globe"></img>
