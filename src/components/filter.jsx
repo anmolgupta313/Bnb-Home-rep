@@ -80,6 +80,8 @@ export default function Filters() {
               </CCarouselItem>
               <CCarouselItem>
                 <CImage
+                 id={homes.id}
+                 onMouseOver={onHover}
                   className="d-block w-100"
                   src={homes.img}
                   alt="slide 2"
@@ -87,6 +89,8 @@ export default function Filters() {
               </CCarouselItem>
               <CCarouselItem>
                 <CImage
+                 id={homes.id}
+                 onMouseOver={onHover}
                   className="d-block w-100"
                   src={homes.img}
                   alt="slide 3"
@@ -94,6 +98,8 @@ export default function Filters() {
               </CCarouselItem>
               <CCarouselItem>
                 <CImage
+                 id={homes.id}
+                 onMouseOver={onHover}
                   className="d-block w-100"
                   src={homes.img}
                   alt="slide 3"

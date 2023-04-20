@@ -13,6 +13,39 @@ nav {
   border-bottom: solid 0.5px rgba(128, 128, 128, 0.29);
 }
 
+section.nav-search {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  border: solid 1px;
+  border-radius: 30px;
+  border-color: #f7f7f7;
+  padding: 5px 0px 5px 25px;
+  box-shadow: 0px 1px 6px 1px #cacaca66;
+}
+
+.one {
+  border: solid 0.5px;
+  height: 25px;
+  color: #eaeaea;
+}
+
+section.nav-search div p {
+  margin-bottom: 0px;
+}
+
+.add-guest {
+  display: flex;
+  align-items: center;
+}
+
+.add-guest div img {
+  background-color: #ff385c;
+  width: 48%;
+  border-radius: 50%;
+  padding: 8px;
+}
+
 .rest-section {
   display: flex;
   flex-direction: row;
@@ -174,7 +207,7 @@ img.home-imgg {
 img.heart-black {
   width: 1.8%;
   position: absolute;
-  margin-left: 19.5%;
+  margin-left: 18.5%;
   margin-top: 10px;
   z-index: 1;
 }
@@ -282,6 +315,7 @@ p.home-name-p {
   display: flex;
   padding-top: 40px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filter-house-img {
@@ -337,13 +371,21 @@ section.footer-section-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  /* padding: 10px 40px; */
   position: fixed;
   width: 100%;
   bottom: 0;
   background-color: #f7f7f7;
   flex-wrap: wrap;
 }
+
+.footer-section-main-div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+padding: 15px 40px;
+}
+
 
 .footer-div {
   display: flex;
@@ -369,10 +411,74 @@ p.footer-p-div2 {
   font-weight: 600;
 }
 
+.uparrow{
+font-size: 20px;
+margin-bottom: 0px;
+}
+
 .footer-globe-img-div {
   margin-right: -26px;
 }
 
 img.globe-footer {
   max-width: 38%;
+}
+
+/* footer toogle */
+section.footer-section-main-toogle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #0000006b;
+  height: 100vh;
+}
+
+
+.footer-div-main-toogle {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: white;
+  /* height: 44vh; */
+  position: fixed;
+  bottom: 0;
+  padding: 50px;
+  column-gap: 8%;
+  flex-wrap: wrap;
+  border:solid 1px;
+  border-color: transparent;
+  border-radius: 15px 15px 5px 5px;
+  
+}
+
+
+.toogle-sub-div {
+  text-align: left;
+}
+
+.toogle-sub-div h6 {
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.toogle-sub-div p {
+  font-size: 14px ;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+img.x {
+  width: 40%;
+  padding: 5px;
+  border: solid 1px;
+  border-color: transparent;
+
+}
+
+img.x:hover {
+  
+  border: solid 1px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #f7f7f7;
 }
