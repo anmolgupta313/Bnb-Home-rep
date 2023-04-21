@@ -14,7 +14,7 @@ return setFooterToggle(prev=> !prev)
 return(
     <section className="footer-section-main">
       <div className="footer-section-main-div">
-        <div className="footer-div">
+        <div className="footer-div-first">
             <p className="footer-p">© 2023 Airbnb, Inc.</p>
             <p className="footer-dot">•</p>
             <p className="footer-p">Privacy</p>
@@ -26,7 +26,7 @@ return(
             <p className="footer-p">Destinations</p>
 
         </div>
-        <div className="footer-div">
+        <div className="footer-div-two">
             <div className="footer-globe-img-div">
             <img className="globe-footer" src={globe}></img>
             </div>

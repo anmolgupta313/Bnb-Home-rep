@@ -56,6 +56,11 @@ export default function Filters() {
     }
 
     const houseMap = tab.homes.map((homes) => {
+      const obj= homes.img
+      for(const property in obj){
+        // console.log(`${property}:${obj[property]}`,"homm")
+     
+      // console.log(obj,"homes")
       return (
         <div className="homes-main-div">
           <div className="home-imgg-div">
@@ -74,7 +79,7 @@ export default function Filters() {
                   id={homes.id}
                   onMouseOver={onHover}
                   className="d-block w-100"
-                  src={homes.img}
+                  src={homes.img.houseOne}
                   alt="slide 1"
                 />
               </CCarouselItem>
@@ -83,7 +88,7 @@ export default function Filters() {
                  id={homes.id}
                  onMouseOver={onHover}
                   className="d-block w-100"
-                  src={homes.img}
+                  src={homes.img.houseTwo}
                   alt="slide 2"
                 />
               </CCarouselItem>
@@ -92,7 +97,7 @@ export default function Filters() {
                  id={homes.id}
                  onMouseOver={onHover}
                   className="d-block w-100"
-                  src={homes.img}
+                  src={homes.img.houseThree}
                   alt="slide 3"
                 />
               </CCarouselItem>
@@ -101,7 +106,16 @@ export default function Filters() {
                  id={homes.id}
                  onMouseOver={onHover}
                   className="d-block w-100"
-                  src={homes.img}
+                  src={homes.img.houseFour}
+                  alt="slide 3"
+                />
+              </CCarouselItem>
+              <CCarouselItem>
+                <CImage
+                 id={homes.id}
+                 onMouseOver={onHover}
+                  className="d-block w-100"
+                  src={homes.img.houseFive}
                   alt="slide 3"
                 />
               </CCarouselItem>
@@ -134,7 +148,7 @@ export default function Filters() {
             <p> {homes.Price}</p>
           </div>
         </div>
-      );
+      ) }
     });
 
     return (

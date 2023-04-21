@@ -1,102 +1,130 @@
-import filter1 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10283.jpg"
-import filter2 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10282.jpg"
-import filter3 from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10281.jpg"
+import skiing from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/skiing.png"
+import lakefront from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/lakefront.png"
+import cabins from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/cabins.png"
+import earthhomes from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/earthhomes.png"
+import play from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/play.png"
+import amazingviews from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/amazingviews.png"
+import mansions from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/mansions.png"
+import omg from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/omg.png"
+import tinyhomes from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/tinyhomes.png"
+import luxe from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/luxe.png"
+import islands from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/islands.png"
+import countryside from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/countryside.png"
+import privaterooms from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/privaterooms.png"
+import tropical from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/tropical.png"
+import trending from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/trending.png"
+import castles from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/castles.png"
+import amazingpools from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/amazingpools.png"
+import domes from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/domes.png"
+
 import { homeData } from "./homeData"
 
 const houses= homeData
 export const filterHome= [{
     "id":1,
-    "img":filter1,
-    "title":"Mansion",
+    "img":skiing,
+    "title":"Skiing",
     "homes": houses
 },
 {
     "id":2,
-    "img":filter2,
-    "title":"Mansion",
+    "img":lakefront,
+    "title":"Lakefront",
     "homes":[{}]
 },
 {
     "id":3,
-    "img":filter3,
-    "title":"Mansion",
+    "img":cabins,
+    "title":"Cabins",
     "homes":[{}]
 },
 {
     "id":4,
-    "img":filter3,
-    "title":"Mansion",
+    "img":earthhomes,
+    "title":"Earth homes",
     "homes":[{}]
 },
 {
     "id":5,
-    "img":filter3,
-    "title":"Mansion",
+    "img":play,
+    "title":"Play",
     "homes":[{}]
 },
 {
     "id":6,
-    "img":filter3,
-    "title":"Mansion",
+    "img":amazingviews,
+    "title":"Amazing views",
     "homes":[{}]
 },
 {
     "id":7,
-    "img":filter3,
-    "title":"Mansion",
+    "img":mansions,
+    "title":"Mansions",
     "homes":[{}]
 },
 {
     "id":8,
-    "img":filter3,
-    "title":"Mansion",
+    "img":omg,
+    "title":"Omg!",
     "homes":[{}]
 },
 {
     "id":9,
-    "img":filter3,
-    "title":"Mansion",
+    "img":tinyhomes,
+    "title":"Tiny homes",
     "homes":[{}]
 },
 {
     "id":10,
-    "img":filter3,
-    "title":"Mansion",
+    "img":luxe,
+    "title":"Luxe",
     "homes":[{}]
 },
 {
     "id":11,
-    "img":filter3,
-    "title":"Mansion",
+    "img":domes,
+    "title":"Domes",
     "homes":[{}]
 },
 {
     "id":12,
-    "img":filter3,
-    "title":"Mansion",
+    "img":countryside,
+    "title":"Countryside",
     "homes":[{}]
 },
 {
     "id":13,
-    "img":filter3,
-    "title":"Mansion",
+    "img":tropical,
+    "title":"Tropical",
     "homes":[{}]
 },
 {
     "id":14,
-    "img":filter3,
-    "title":"Mansion",
+    "img":trending,
+    "title":"Trending",
     "homes":[{}]
 },
 {
     "id":15,
-    "img":filter3,
-    "title":"Mansion",
+    "img":castles,
+    "title":"Castles",
     "homes":[{}]
 },  {
     "id":16,
-    "img":filter3,
-    "title":"Mansion",
+    "img":privaterooms,
+    "title":"Privare rooms",
+    "homes":[{}]
+},
+{
+    "id":17,
+    "img":islands,
+    "title":"Islands",
+    "homes":[{}]
+},
+{
+    "id":18,
+    "img": amazingpools,
+    "title":"Amazing pools",
     "homes":[{}]
 },
 ]
