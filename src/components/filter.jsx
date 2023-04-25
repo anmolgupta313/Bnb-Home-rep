@@ -4,12 +4,13 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import { filterHome } from "./filterhome";
 
 export default function Filters() {
+
+ 
   const [filterTab, setFilterTab] = useState(1);
   const [heartTab, setheartTab] = useState(1);
   const [hoverIndicator, setHoverIndicator] = useState(1);
   const [favOn, setFavOn] = useState(false);
   const [indicators, setIndicators] = useState(false);
-
   const elementRef = useRef();
 
   const handleClick = (e) => {
@@ -51,19 +52,19 @@ export default function Filters() {
       // console.log(favOn)
     }
 
-    function offHover() {
-      console.log("Off");
-    }
+    // function offHover() {
+    //   console.log("Off");
+    // }
 
-    const houseMap = tab.homes.map((homes) => {
+    const houseMap = tab.homes.map((homes,i) => {
       const obj= homes.img
       for(const property in obj){
         // console.log(`${property}:${obj[property]}`,"homm")
      
       // console.log(obj,"homes")
-      return (
+     return (
         <div className="homes-main-div">
-          <div className="home-imgg-div">
+          <div className="home-imgg-div" key={i}>
             {/* <img src={homes.img} alt="home" className="home-imgg" /> */}
             <CCarousel
               interval="false"
@@ -76,6 +77,7 @@ export default function Filters() {
             >
               <CCarouselItem>
                 <CImage
+                
                   id={homes.id}
                   onMouseOver={onHover}
                   className="d-block w-100"
