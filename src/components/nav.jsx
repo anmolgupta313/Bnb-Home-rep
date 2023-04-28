@@ -4,12 +4,26 @@ import logo from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/10290.ico
 import globe from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/globe.png";
 import hamburger from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/hamburger.png";
 import profile from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/profile.png";
-import search from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/search.png"
+import search from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/search.png";
+import flexible from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/flexible.jpg";
+import europe from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/europe.jpg";
+import unitedstates from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/unitedstates.jpg";
+import caribbean from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/caribbean.jpg";
+import italy from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/italy.jpg";
+import centralamerica from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/centralamerica.jpg";
+
 export default function Nav(props) {
 
   const [showSearch, setShowSearch] = useState(true)
+  function filtertoggleOn(){
+    return setShowSearch((prev) =>{ return prev===false})
+  }
+  function filtertoggleOff(){
+    return setShowSearch((prev) =>{ return prev===false})
+  }
   return (
     <nav>
+        {showSearch=== false && <div className="destination-form-main-section" onClick={filtertoggleOff}></div>}
       <section className="main-nav-section">
       <section className="logo-section">
         <div className="logo">
@@ -17,7 +31,7 @@ export default function Nav(props) {
         </div>
       </section>
       {showSearch=== true ? (<section className="nav-search">
-        <div >
+        <div onClick={filtertoggleOn}>
           <p>Anywhere</p>
         </div>
         <div className="one"></div>
@@ -76,9 +90,11 @@ export default function Nav(props) {
       </section>
 
       {showSearch=== false &&
-      <section className="destination-form-main-section">
+      <section >
+     
        <div className="destination-form-upper-div">
         <div className="destination-form-lower-div">
+          <div className="mainwhere">
           <div className="where-div">
 <label> <div className="form-title-search">Where</div>
   <input
@@ -88,14 +104,20 @@ export default function Nav(props) {
   placeholder="Search destinations"></input>
 </label>
           </div>
+          </div>
+          <div className="mainwhere">
           <div className="check-in-out">
 <div className="form-title-search">Check in</div>
 <div className="form-sub-title">Add dates</div>
           </div>
+          </div>
+          <div className="mainwhere">
           <div className="check-in-out">
           <div className="form-title-search">Check out</div>
 <div className="form-sub-title">Add dates</div>
           </div>
+          </div>
+          <div className="mainwhere">
           <div className="who-guests">
             <div className="add-guest-two">
             <div className="form-title-search">Who</div>
@@ -104,7 +126,41 @@ export default function Nav(props) {
             <div className="search-icon">
             <img className="search-icon-img" src={search} alt="search-icon"></img>
             </div>
+            </div>
            
+          </div>
+        </div>
+       </div>
+       <div className="search-region-main-div">
+        <div className="search-region-title-div"><p>Seacrh by region</p></div>
+        <div className="search-region-content-div">
+        <div className="serach-region-content-sub-div-one">
+          <div className="search-region-content-sub-div">
+             <div className="imggggg"><img className="search-region-img" src={flexible}></img></div>
+            <div><p>I'm flexible</p></div>
+          </div>
+          <div className="search-region-content-sub-div">
+             <div className="imggggg"><img className="search-region-img" src={europe}></img></div>
+            <div><p>Europe</p></div>
+          </div>
+          <div className="search-region-content-sub-div">
+             <div className="imggggg"><img className="search-region-img" src={unitedstates}></img></div>
+            <div><p>United States</p></div>
+          </div>
+          </div>
+          <div className="serach-region-content-sub-div-one">
+          <div className="search-region-content-sub-div">
+             <div className="imggggg"><img className="search-region-img" src={caribbean}></img></div>
+            <div><p>Caribbean</p></div>
+          </div>
+          <div className="search-region-content-sub-div">
+             <div className="imggggg"><img className="search-region-img" src={italy}></img></div>
+            <div><p>Italy</p></div>
+          </div>
+          <div className="search-region-content-sub-div">
+             <div className="imggggg"><img className="search-region-img" src={centralamerica}></img></div>
+            <div><p>Central America</p></div>
+          </div>
           </div>
         </div>
        </div>
