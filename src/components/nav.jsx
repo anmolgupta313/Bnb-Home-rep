@@ -26,19 +26,15 @@ export default function Nav(props) {
   function filtertoggleOnaddGuest() {
     setShowSearch(false);
     setAddguest(true);
+    setSearchRegion(false)
   }
 
-  // console.log(showSearch,"Sss")
-  function allfilterOff() {
-    setSearchRegion(false);
-    setAddguest(false);
+  function allfilterOff(e) {
+    return e.target.id === "one"
+      ? setSearchRegion(false) || setAddguest(false)
+      : "";
   }
 
-  function searchRegionOn() {
-    return setSearchRegion((prev) => {
-      return !prev;
-    });
-  }
   function filtertoggleOff() {
     setShowSearch((prev) => {
       return prev === false;
@@ -47,8 +43,11 @@ export default function Nav(props) {
 
     setAddguest(false);
   }
+  function searchRegionOn() {
+    setSearchRegion(true);
+    setAddguest(false);
+  }
 
-  console.log(searchRegion, "ss");
   return (
     <nav>
       {showSearch === false && (
@@ -128,9 +127,13 @@ export default function Nav(props) {
 
       {showSearch === false && (
         <section>
-          <div className="destination-form-upper-div" onClick={allfilterOff}>
+          <div
+            id="one"
+            className="destination-form-upper-div"
+            onClick={allfilterOff}
+          >
             <div className="destination-form-lower-div">
-              <div className="mainwhere" onClick={searchRegionOn}>
+              <div id="two" className="mainwhere" onClick={searchRegionOn}>
                 <div className="where-div">
                   <label>
                     {" "}
@@ -158,7 +161,11 @@ export default function Nav(props) {
               </div>
               <div className="mainwhere">
                 <div className="who-guests">
-                  <div className="add-guest-two">
+                  <div
+                    id="three"
+                    className="add-guest-two"
+                    onClick={filtertoggleOnaddGuest}
+                  >
                     <div className="form-title-search">Who</div>
                     <div className="form-sub-title">Add guests</div>
                   </div>

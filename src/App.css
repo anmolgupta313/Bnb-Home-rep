@@ -259,6 +259,7 @@ background-color: #dddddd;
   position: absolute;
   left: 31%;
   margin-top: -4px;
+  margin-left: -125px;
 }
 .search-region-title-div {
   text-align: start;
@@ -501,7 +502,7 @@ hr {
   justify-content: space-between;
   width: 94%;
   position: absolute;
-  top: 19%;
+  top: 144px;
 }
 button.btn-scroll {
   background: transparent;

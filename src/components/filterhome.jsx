@@ -125,6 +125,6 @@ export const filterHome= [{
     "id":18,
     "img": amazingpools,
     "title":"Amazing pools",
-    "homes":[{}]
+    "homes":houses
 },
 ]

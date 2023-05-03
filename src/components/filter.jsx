@@ -12,13 +12,14 @@ export default function Filters() {
   const elementRef = useRef();
 
   const handleClick = (e) => {
-    console.log(e.target.id);
+    console.log("handleclick",typeof e.target.id);
     return setFilterTab(e.target.id);
   };
   const filterTabMap = filterHome.map((tab, i) => {
+    
     return (
       <div className="filter-img-div-main">
-        <div className="filter-img-div">
+        <div className="filter-img-div" >
           <img
             className="filter-house-img"
             src={tab.img}
@@ -41,6 +42,7 @@ export default function Filters() {
       setHoverIndicator(e.target.id);
       setIndicators((prev) => (prev = true));
     }
+    
 
     function toggle(e) {
       setheartTab(e.target.id);
@@ -53,7 +55,7 @@ export default function Filters() {
     // function offHover() {
     //   console.log("Off");
     // }
-
+// debugger 
     const houseMap = tab.homes.map((homes, i) => {
       const obj = homes.img;
       for (const property in obj) {
@@ -154,7 +156,7 @@ export default function Filters() {
     return (
       <div key={i}>
         {" "}
-        {filterTab === `${tab.id}` && (
+        {filterTab == `${tab.id}` && (
           <div className="house-map-div">{houseMap}</div>
         )}
       </div>
