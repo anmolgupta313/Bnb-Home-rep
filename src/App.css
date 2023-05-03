@@ -72,6 +72,7 @@ section.nav-search-two {
 
 .mainwhere {
   position: relative;
+  z-index: 4;
 }
 .where-div {
   padding: 0px 32px;
@@ -225,6 +226,8 @@ background-color: #dddddd;
 .who-guests {
   display: flex;
   align-items: flex-end;
+  z-index: 4;
+  position: relative;
 }
 
 .add-guest-two {

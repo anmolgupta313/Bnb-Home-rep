@@ -4,8 +4,6 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import { filterHome } from "./filterhome";
 
 export default function Filters() {
-
- 
   const [filterTab, setFilterTab] = useState(1);
   const [heartTab, setheartTab] = useState(1);
   const [hoverIndicator, setHoverIndicator] = useState(1);
@@ -56,101 +54,101 @@ export default function Filters() {
     //   console.log("Off");
     // }
 
-    const houseMap = tab.homes.map((homes,i) => {
-      const obj= homes.img
-      for(const property in obj){
+    const houseMap = tab.homes.map((homes, i) => {
+      const obj = homes.img;
+      for (const property in obj) {
         // console.log(`${property}:${obj[property]}`,"homm")
-     
-      // console.log(obj,"homes")
-     return (
-        <div className="homes-main-div">
-          <div className="home-imgg-div" key={i}>
-            {/* <img src={homes.img} alt="home" className="home-imgg" /> */}
-            <CCarousel
-              interval="false"
-              controls={
-                hoverIndicator === `${homes.id}` && indicators === true
-                  ? true
-                  : false
-              }
-              indicators
-            >
-              <CCarouselItem>
-                <CImage
-                
-                  id={homes.id}
-                  onMouseOver={onHover}
-                  className="d-block w-100"
-                  src={homes.img.houseOne}
-                  alt="slide 1"
-                />
-              </CCarouselItem>
-              <CCarouselItem>
-                <CImage
-                 id={homes.id}
-                 onMouseOver={onHover}
-                  className="d-block w-100"
-                  src={homes.img.houseTwo}
-                  alt="slide 2"
-                />
-              </CCarouselItem>
-              <CCarouselItem>
-                <CImage
-                 id={homes.id}
-                 onMouseOver={onHover}
-                  className="d-block w-100"
-                  src={homes.img.houseThree}
-                  alt="slide 3"
-                />
-              </CCarouselItem>
-              <CCarouselItem>
-                <CImage
-                 id={homes.id}
-                 onMouseOver={onHover}
-                  className="d-block w-100"
-                  src={homes.img.houseFour}
-                  alt="slide 3"
-                />
-              </CCarouselItem>
-              <CCarouselItem>
-                <CImage
-                 id={homes.id}
-                 onMouseOver={onHover}
-                  className="d-block w-100"
-                  src={homes.img.houseFive}
-                  alt="slide 3"
-                />
-              </CCarouselItem>
-            </CCarousel>
-            <img
-              className="heart-black"
-              onClick={toggle}
-              id={homes.id}
-              src={
-                heartTab === `${homes.id}` && favOn
-                  ? homes.heartRed
-                  : homes.heartBlack
-              }
-            ></img>
-          </div>
-          <div className="star-name-rating-div-main">
-            <div>
-              <p className="home-name-p">{homes.Country}</p>
-            </div>
 
-            <div className="star-rating-div">
-              <img className="star" src={homes.star}></img>
-              <p>{homes.rating}</p>
+        // console.log(obj,"homes")
+        return (
+          <div className="homes-main-div">
+            <div className="home-imgg-div" key={i}>
+              {/* <img src={homes.img} alt="home" className="home-imgg" /> */}
+              <CCarousel
+                interval="false"
+                controls={
+                  hoverIndicator === `${homes.id}` && indicators === true
+                    ? true
+                    : false
+                }
+                indicators
+              >
+                <CCarouselItem>
+                  <CImage
+                    id={homes.id}
+                    onMouseOver={onHover}
+                    className="d-block w-100"
+                    src={homes.img.houseOne}
+                    alt="slide 1"
+                  />
+                </CCarouselItem>
+                <CCarouselItem>
+                  <CImage
+                    id={homes.id}
+                    onMouseOver={onHover}
+                    className="d-block w-100"
+                    src={homes.img.houseTwo}
+                    alt="slide 2"
+                  />
+                </CCarouselItem>
+                <CCarouselItem>
+                  <CImage
+                    id={homes.id}
+                    onMouseOver={onHover}
+                    className="d-block w-100"
+                    src={homes.img.houseThree}
+                    alt="slide 3"
+                  />
+                </CCarouselItem>
+                <CCarouselItem>
+                  <CImage
+                    id={homes.id}
+                    onMouseOver={onHover}
+                    className="d-block w-100"
+                    src={homes.img.houseFour}
+                    alt="slide 3"
+                  />
+                </CCarouselItem>
+                <CCarouselItem>
+                  <CImage
+                    id={homes.id}
+                    onMouseOver={onHover}
+                    className="d-block w-100"
+                    src={homes.img.houseFive}
+                    alt="slide 3"
+                  />
+                </CCarouselItem>
+              </CCarousel>
+              <img
+                className="heart-black"
+                onClick={toggle}
+                id={homes.id}
+                src={
+                  heartTab === `${homes.id}` && favOn
+                    ? homes.heartRed
+                    : homes.heartBlack
+                }
+              ></img>
+            </div>
+            <div className="star-name-rating-div-main">
+              <div>
+                <p className="home-name-p">{homes.Country}</p>
+              </div>
+
+              <div className="star-rating-div">
+                <img className="star" src={homes.star}></img>
+                <p>{homes.rating}</p>
+              </div>
+            </div>
+            <div>
+              <p>{homes.Date}</p>
+            </div>
+            <div>
+              <p> {homes.Price}</p>
             </div>
           </div>
-          <div>
-            <p>{homes.Date}</p>
-          </div>
-          <div>
-            <p> {homes.Price}</p>
-          </div>
-        </div>
-      ) }
+        );
+      }
     });
 
     return (

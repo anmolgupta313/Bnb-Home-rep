@@ -15,41 +15,40 @@ import centralamerica from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb
 
 export default function Nav(props) {
   const [showSearch, setShowSearch] = useState(true);
-  const [searchRegion, setSearchRegion] =useState(false);
-  const [addGuest, setAddguest] =useState(false);
+  const [searchRegion, setSearchRegion] = useState(false);
+  const [addGuest, setAddguest] = useState(false);
 
-
-
-  
   function filtertoggleOnRegion() {
-    setShowSearch(false)
-    setSearchRegion(true)
+    setShowSearch(false);
+    setSearchRegion(true);
   }
 
   function filtertoggleOnaddGuest() {
-    setShowSearch(false)
-    setAddguest(true)
+    setShowSearch(false);
+    setAddguest(true);
   }
 
   // console.log(showSearch,"Sss")
-  function allfilterOff(){
-    return setSearchRegion(false)
+  function allfilterOff() {
+    setSearchRegion(false);
+    setAddguest(false);
   }
 
-
-
-  function searchRegionOn(){
-    return setSearchRegion((prev)=>{
-      return !prev
-    })
-  }
-  function filtertoggleOff() {
-    return setShowSearch((prev) => {
-      return prev === false;
+  function searchRegionOn() {
+    return setSearchRegion((prev) => {
+      return !prev;
     });
   }
+  function filtertoggleOff() {
+    setShowSearch((prev) => {
+      return prev === false;
+    });
+    setSearchRegion(false);
 
-  console.log(searchRegion,"ss")
+    setAddguest(false);
+  }
+
+  console.log(searchRegion, "ss");
   return (
     <nav>
       {showSearch === false && (
@@ -133,9 +132,9 @@ export default function Nav(props) {
             <div className="destination-form-lower-div">
               <div className="mainwhere" onClick={searchRegionOn}>
                 <div className="where-div">
-                  <label >
+                  <label>
                     {" "}
-                    <div className="form-title-search" >Where</div>
+                    <div className="form-title-search">Where</div>
                     <input
                       type="text"
                       id="destination"
@@ -174,69 +173,78 @@ export default function Nav(props) {
               </div>
             </div>
           </div>
-         {searchRegion===true && <div className="search-region-main-div">
-            <div className="search-region-title-div">
-              <p>Seacrh by region</p>
-            </div>
-            <div className="search-region-content-div">
-              <div className="serach-region-content-sub-div-one">
-                <div className="search-region-content-sub-div">
-                  <div className="imggggg">
-                    <img className="search-region-img" src={europe}></img>
+          {searchRegion === true && (
+            <div className="search-region-main-div">
+              <div className="search-region-title-div">
+                <p>Seacrh by region</p>
+              </div>
+              <div className="search-region-content-div">
+                <div className="serach-region-content-sub-div-one">
+                  <div className="search-region-content-sub-div">
+                    <div className="imggggg">
+                      <img className="search-region-img" src={europe}></img>
+                    </div>
+                    <div>
+                      <p>I'm flexible</p>
+                    </div>
                   </div>
-                  <div>
-                    <p>I'm flexible</p>
+                  <div className="search-region-content-sub-div">
+                    <div className="imggggg">
+                      <img className="search-region-img" src={europe}></img>
+                    </div>
+                    <div>
+                      <p>Europe</p>
+                    </div>
+                  </div>
+                  <div className="search-region-content-sub-div">
+                    <div className="imggggg">
+                      <img
+                        className="search-region-img"
+                        src={unitedstates}
+                      ></img>
+                    </div>
+                    <div>
+                      <p>United States</p>
+                    </div>
                   </div>
                 </div>
-                <div className="search-region-content-sub-div">
-                  <div className="imggggg">
-                    <img className="search-region-img" src={europe}></img>
+                <div className="serach-region-content-sub-div-one">
+                  <div className="search-region-content-sub-div">
+                    <div className="imggggg">
+                      <img className="search-region-img" src={caribbean}></img>
+                    </div>
+                    <div>
+                      <p>Caribbean</p>
+                    </div>
                   </div>
-                  <div>
-                    <p>Europe</p>
+                  <div className="search-region-content-sub-div">
+                    <div className="imggggg">
+                      <img className="search-region-img" src={italy}></img>
+                    </div>
+                    <div>
+                      <p>Italy</p>
+                    </div>
                   </div>
-                </div>
-                <div className="search-region-content-sub-div">
-                  <div className="imggggg">
-                    <img className="search-region-img" src={unitedstates}></img>
-                  </div>
-                  <div>
-                    <p>United States</p>
+                  <div className="search-region-content-sub-div">
+                    <div className="imggggg">
+                      <img
+                        className="search-region-img"
+                        src={centralamerica}
+                      ></img>
+                    </div>
+                    <div>
+                      <p>Central America</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="serach-region-content-sub-div-one">
-                <div className="search-region-content-sub-div">
-                  <div className="imggggg">
-                    <img className="search-region-img" src={caribbean}></img>
-                  </div>
-                  <div>
-                    <p>Caribbean</p>
-                  </div>
-                </div>
-                <div className="search-region-content-sub-div">
-                  <div className="imggggg">
-                    <img className="search-region-img" src={italy}></img>
-                  </div>
-                  <div>
-                    <p>Italy</p>
-                  </div>
-                </div>
-                <div className="search-region-content-sub-div">
-                  <div className="imggggg">
-                    <img
-                      className="search-region-img"
-                      src={centralamerica}
-                    ></img>
-                  </div>
-                  <div>
-                    <p>Central America</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div> }
-{addGuest===true && <div><Addguest /></div>}
+          )}
+          {addGuest === true && (
+            <div>
+              <Addguest />
+            </div>
+          )}
         </section>
       )}
     </nav>
