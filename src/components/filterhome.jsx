@@ -17,7 +17,12 @@ import castles from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/castle
 import amazingpools from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/amazingpools.png"
 import domes from "../Holiday_Homes_Apartment_Rentals_-_Airbnb_-_Airbnb/domes.png"
 
-import { homeData } from "./homeData"
+import { homeData } from "./houses/homeData"
+import { lakeFront } from "./houses/lakefront"
+import { cabin } from "./houses/cabin"
+import { earthHomes } from "./houses/earthHomes"
+import { plays } from "./houses/play"
+import { amazingViews } from "./houses/amazingViews"
 
 const houses= homeData
 export const filterHome= [{
@@ -30,31 +35,31 @@ export const filterHome= [{
     "id":2,
     "img":lakefront,
     "title":"Lakefront",
-    "homes":[{}]
+    "homes":lakeFront
 },
 {
     "id":3,
     "img":cabins,
     "title":"Cabins",
-    "homes":[{}]
+    "homes":cabin
 },
 {
     "id":4,
     "img":earthhomes,
     "title":"Earth homes",
-    "homes":[{}]
+    "homes":earthHomes
 },
 {
     "id":5,
     "img":play,
     "title":"Play",
-    "homes":[{}]
+    "homes":plays
 },
 {
     "id":6,
     "img":amazingviews,
     "title":"Amazing views",
-    "homes":[{}]
+    "homes":amazingViews
 },
 {
     "id":7,

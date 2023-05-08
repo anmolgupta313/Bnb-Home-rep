@@ -502,7 +502,7 @@ hr {
   justify-content: space-between;
   width: 94%;
   position: absolute;
-  top: 144px;
+  top: 104px;
 }
 button.btn-scroll {
   background: transparent;
@@ -540,7 +540,7 @@ img.homefil-img {
   display: flex;
   justify-content: flex-start;
   /* column-gap: 12px; */
-  padding-top: 45px;
+  padding-top: 5px;
   overflow-y: hidden;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -657,7 +657,7 @@ span.carousel-control-prev-icon:hover {
 }
 
 img.star {
-  width: 32%;
+  width: 16px;
   height: fit-content;
 }
 p.home-name-p {
@@ -689,7 +689,7 @@ p.home-name-p {
 
 .house-map-div {
   display: flex;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   flex-wrap: wrap;
   justify-content: center;
 }
