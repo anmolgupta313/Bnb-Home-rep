@@ -23,6 +23,8 @@ import { cabin } from "./houses/cabin"
 import { earthHomes } from "./houses/earthHomes"
 import { plays } from "./houses/play"
 import { amazingViews } from "./houses/amazingViews"
+import { mansion } from "./houses/mansion"
+import { omgs } from "./houses/omg"
 
 const houses= homeData
 export const filterHome= [{
@@ -65,13 +67,13 @@ export const filterHome= [{
     "id":7,
     "img":mansions,
     "title":"Mansions",
-    "homes":[{}]
+    "homes":mansion
 },
 {
     "id":8,
     "img":omg,
     "title":"Omg!",
-    "homes":[{}]
+    "homes":omgs
 },
 {
     "id":9,
