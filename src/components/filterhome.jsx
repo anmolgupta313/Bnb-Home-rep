@@ -25,6 +25,10 @@ import { plays } from "./houses/play"
 import { amazingViews } from "./houses/amazingViews"
 import { mansion } from "./houses/mansion"
 import { omgs } from "./houses/omg"
+import { tinyHome } from "./houses/tinyHome"
+import { luxes } from "./houses/luxe"
+import { dome } from "./houses/domes"
+import { countrySide } from "./houses/countrySide"
 
 const houses= homeData
 export const filterHome= [{
@@ -79,25 +83,25 @@ export const filterHome= [{
     "id":9,
     "img":tinyhomes,
     "title":"Tiny homes",
-    "homes":[{}]
+    "homes":tinyHome
 },
 {
     "id":10,
     "img":luxe,
     "title":"Luxe",
-    "homes":[{}]
+    "homes":luxes
 },
 {
     "id":11,
     "img":domes,
     "title":"Domes",
-    "homes":[{}]
+    "homes":dome
 },
 {
     "id":12,
     "img":countryside,
     "title":"Countryside",
-    "homes":[{}]
+    "homes":countrySide
 },
 {
     "id":13,
