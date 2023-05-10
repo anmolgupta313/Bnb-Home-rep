@@ -29,6 +29,7 @@ import { tinyHome } from "./houses/tinyHome"
 import { luxes } from "./houses/luxe"
 import { dome } from "./houses/domes"
 import { countrySide } from "./houses/countrySide"
+import { tropicals } from "./houses/tropical"
 
 const houses= homeData
 export const filterHome= [{
@@ -107,7 +108,7 @@ export const filterHome= [{
     "id":13,
     "img":tropical,
     "title":"Tropical",
-    "homes":[{}]
+    "homes":tropicals
 },
 {
     "id":14,
