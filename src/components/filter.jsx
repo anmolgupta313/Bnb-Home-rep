@@ -16,9 +16,25 @@ export default function Filters() {
     return setFilterTab(e.target.id);
   };
   const filterTabMap = filterHome.map((tab, i) => {
-    
+    const style= {border:"solid",
+  borderColor:"black",
+borderWidth:"0px 0px 2px 0px",
+}
+
+const styleOpacity= {
+  opacity:1
+}
+
+const hover={
+  "&:hover":{
+    border:"solid",
+  borderColor:"black",
+borderWidth:"0px 0px 2px 0px",
+borderOpacity: 0.6425339366515838
+  }
+}
     return (
-      <div className="filter-img-div-main">
+      <div className="filter-img-div-main" style={filterTab == `${tab.id}`? style:hover}>
         <div className="filter-img-div" >
           <img
             className="filter-house-img"
@@ -27,10 +43,11 @@ export default function Filters() {
             key={i}
             disabled={filterTab === `${tab.id}`}
             onClick={handleClick}
+            style={filterTab == `${tab.id}`? styleOpacity:{opacity:0.6425339366515838}}
           ></img>
         </div>
         <div>
-          <p className="filter-img-title">{tab.title}</p>
+          <p style={filterTab == `${tab.id}`? styleOpacity:{opacity:0.6425339366515838}} className="filter-img-title">{tab.title}</p>
         </div>
       </div>
     );

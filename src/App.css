@@ -727,7 +727,7 @@ p.home-name-p {
 }
 p.filter-img-title {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   min-width: 87px;
   margin-bottom: 11px;
 }
@@ -772,6 +772,7 @@ section.footer-section-main {
   bottom: 0;
   background-color: #f7f7f7;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 .footer-section-main-div {

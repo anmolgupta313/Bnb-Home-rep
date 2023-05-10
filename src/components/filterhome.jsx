@@ -30,6 +30,11 @@ import { luxes } from "./houses/luxe"
 import { dome } from "./houses/domes"
 import { countrySide } from "./houses/countrySide"
 import { tropicals } from "./houses/tropical"
+import { trendings } from "./houses/trendiings"
+import { castle } from "./houses/castles"
+import { rooms } from "./houses/rooms"
+import { island } from "./houses/island"
+import { amazingPools } from "./houses/amazingPools"
 
 const houses= homeData
 export const filterHome= [{
@@ -114,29 +119,29 @@ export const filterHome= [{
     "id":14,
     "img":trending,
     "title":"Trending",
-    "homes":[{}]
+    "homes":trendings
 },
 {
     "id":15,
     "img":castles,
     "title":"Castles",
-    "homes":[{}]
+    "homes":castle
 },  {
     "id":16,
     "img":privaterooms,
     "title":"Privare rooms",
-    "homes":[{}]
+    "homes":rooms
 },
 {
     "id":17,
     "img":islands,
     "title":"Islands",
-    "homes":[{}]
+    "homes":island
 },
 {
     "id":18,
     "img": amazingpools,
     "title":"Amazing pools",
-    "homes":houses
+    "homes":amazingPools
 },
 ]
