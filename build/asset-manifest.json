@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Bnb-Home-rep/static/css/main.f7cd1d3d.css",
+    "main.js": "/Bnb-Home-rep/static/js/main.07433bdc.js",
+    "static/js/787.ab3021ab.chunk.js": "/Bnb-Home-rep/static/js/787.ab3021ab.chunk.js",
+    "static/media/flexible.jpg": "/Bnb-Home-rep/static/media/flexible.ea4bee9a8ae36c0e3395.jpg",
+    "static/media/10290.ico": "/Bnb-Home-rep/static/media/10290.8d4dd0b74bcc316f5101.ico",
+    "index.html": "/Bnb-Home-rep/index.html",
+    "main.f7cd1d3d.css.map": "/Bnb-Home-rep/static/css/main.f7cd1d3d.css.map",
+    "main.07433bdc.js.map": "/Bnb-Home-rep/static/js/main.07433bdc.js.map",
+    "787.ab3021ab.chunk.js.map": "/Bnb-Home-rep/static/js/787.ab3021ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7cd1d3d.css",
+    "static/js/main.07433bdc.js"
+  ]
+}
